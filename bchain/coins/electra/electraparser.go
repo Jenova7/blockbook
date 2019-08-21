@@ -12,12 +12,12 @@ import (
 
 const (
 	MainnetMagic wire.BitcoinNet = 0Xb5a2f1b4
-	TestnetMagic wire.BitcoinNet = 0xe1e2e3e7
+	//TestnetMagic wire.BitcoinNet = 0xe1e2e3e7
 )
 
 var (
 	MainNetParams chaincfg.Params
-	TestNetParams chaincfg.Params
+	//TestNetParams chaincfg.Params
 )
 
 func init() {
@@ -27,11 +27,11 @@ func init() {
 	MainNetParams.ScriptHashAddrID = []byte{40} // 0x28 
 	MainNetParams.PrivateKeyID = []byte{161} // 0xA1
 
-	TestNetParams = chaincfg.TestNet3Params
+	/*TestNetParams = chaincfg.TestNet3Params
 	TestNetParams.Net = TestnetMagic
 	TestNetParams.PubKeyHashAddrID = []byte{92} // 0x5C	
 	TestNetParams.ScriptHashAddrID = []byte{41} // 0x29
-	MainNetParams.PrivateKeyID = []byte{220} // 0xDC
+	TestNetParams.PrivateKeyID = []byte{220} // 0xDC*/
 }
 
 // ElectraParser handle
@@ -48,17 +48,17 @@ func NewElectraParser(params *chaincfg.Params, c *btc.Configuration) *ElectraPar
 func GetChainParams(chain string) *chaincfg.Params {
 	if !chaincfg.IsRegistered(&MainNetParams) {
 		err := chaincfg.Register(&MainNetParams)
-		if err == nil {
+		/*if err == nil {
 			err = chaincfg.Register(&TestNetParams)
-		}
+		}*/
 		if err != nil {
 			panic(err)
 		}
 	}
-	switch chain {
+	/*switch chain {
 	case "test":
 		return &TestNetParams
-	default:
+	default:*/
 		return &MainNetParams
-	}
+	//}
 }

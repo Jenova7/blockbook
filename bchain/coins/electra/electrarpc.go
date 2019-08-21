@@ -43,14 +43,14 @@ func (b *ElectraRPC) Initialize() error {
 	// always create parser
 	b.Parser = NewElectraParser(params, b.ChainConfig)
 
-	// parameters for getInfo request
-	if params.Net == MainnetMagic {
+	// parameters for getInfo request 
+	//if params.Net == MainnetMagic {
 		b.Testnet = false
 		b.Network = "livenet"
-	} else {
+	/*} else {
 		b.Testnet = true
 		b.Network = "testnet"
-	}
+	}*/
 
 	glog.Info("rpc: block chain ", params.Name)
 
