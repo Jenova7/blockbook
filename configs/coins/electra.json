@@ -23,9 +23,9 @@
       "package_revision": "satoshilabs-1",
       "system_user": "electra",
       "version": "2.1.0",
-      "binary_url": "https://github.com/Electra-project/electra-core/releases/download/2.1.0/Linux-Electrad-CLI-TX-2.1.0.zip",
+      "binary_url": "https://github.com/Electra-project/electra-core/releases/download/2.1.0/Linux-Electrad-CLI-TX-2.1.0.tar.gz",
       "verification_type": "sha256",
-      "verification_source": "C20A827B058379B5DE6A45451F5B34126E2D578B706B495D9E7F072396EE4D3E",
+      "verification_source": "798D03E497981888D6B8E85DACB29D22F6588A7CFBE60C5991AB533EC7CD7A8F",
       "extract_command": "tar -C backend --strip 1 -xzvf",
       "exclude_files": [
       ],
