@@ -10,6 +10,7 @@ import (
 	"blockbook/bchain/coins/dcr"
 	"blockbook/bchain/coins/digibyte"
 	"blockbook/bchain/coins/dogecoin"
+	"blockbook/bchain/coins/electra"
 	"blockbook/bchain/coins/eth"
 	"blockbook/bchain/coins/flo"
 	"blockbook/bchain/coins/fujicoin"
@@ -65,6 +66,7 @@ func init() {
 	BlockChainFactories["Dash Testnet"] = dash.NewDashRPC
 	BlockChainFactories["Decred"] = dcr.NewDecredRPC
 	BlockChainFactories["Decred Testnet"] = dcr.NewDecredRPC
+	BlockChainFactories["Electra"] = electra.NewElectraRPC
 	BlockChainFactories["GameCredits"] = gamecredits.NewGameCreditsRPC
 	BlockChainFactories["Koto"] = koto.NewKotoRPC
 	BlockChainFactories["Koto Testnet"] = koto.NewKotoRPC
