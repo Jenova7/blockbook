@@ -1,4 +1,4 @@
-package Electra
+package electra
 
 import (
 	"blockbook/bchain"
