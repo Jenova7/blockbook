@@ -1,10 +1,10 @@
 package electra
 
 import (
-	"blockbook/bchain"
+	//"blockbook/bchain"
 	"blockbook/bchain/coins/btc"
-	"blockbook/bchain/coins/utils"
-	"bytes"
+	//"blockbook/bchain/coins/utils"
+	//"bytes"
 
 	"github.com/martinboehm/btcd/wire"
 	"github.com/martinboehm/btcutil/chaincfg"

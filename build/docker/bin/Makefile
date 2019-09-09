@@ -23,14 +23,14 @@ tools:
 	cp $(CURDIR)/{ldb,sst_dump} /out
 	chown $(PACKAGER) /out/{ldb,sst_dump}
 
-test: prepare-sources generate-data
-	cd $(BLOCKBOOK_SRC) && go test -tags unittest `go list ./... | grep -vP '^blockbook/(contrib|tests)'` $(ARGS)
+#test: prepare-sources generate-data
+#	cd $(BLOCKBOOK_SRC) && go test -tags unittest `go list ./... | grep -vP '^blockbook/(contrib|tests)'` $(ARGS)
+#
+#test-integration: prepare-sources generate-data
+#	cd $(BLOCKBOOK_SRC) && go test -tags integration `go list blockbook/tests/...` $(ARGS)
 
-test-integration: prepare-sources generate-data
-	cd $(BLOCKBOOK_SRC) && go test -tags integration `go list blockbook/tests/...` $(ARGS)
-
-test-all: prepare-sources generate-data
-	cd $(BLOCKBOOK_SRC) && go test -tags 'unittest integration' `go list ./... | grep -v '^blockbook/contrib'` $(ARGS)
+#test-all: prepare-sources generate-data
+#	cd $(BLOCKBOOK_SRC) && go test -tags 'unittest integration' `go list ./... | grep -v '^blockbook/contrib'` $(ARGS)
 
 prepare-sources:
 	@ [ -n "`ls /src 2> /dev/null`" ] || (echo "/src doesn't exist or is empty" 1>&2 && exit 1)
